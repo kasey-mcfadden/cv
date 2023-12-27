@@ -1,22 +1,7 @@
 import { GitHubIcon } from "../components/icons/GitHubIcon";
 import { LinkedInIcon } from "../components/icons/LinkedInIcon";
-import AmbitLogo from "../images/logos/ambit.png";
-import BarepapersLogo from "../images/logos/barepapers.svg";
-import BimLogo from "../images/logos/bim.png";
-import CDGOLogo from "../images/logos/cdgo.png";
-import ClevertechLogo from "../images/logos/clevertech.png";
-import ConsultlyLogo from "../images/logos/consultly.svg";
-import EvercastLogo from "../images/logos/evercast.svg";
-import Howdy from "../images/logos/howdy.png";
-import JarockiMeLogo from "../images/logos/jarocki.svg";
-import JojoMobileLogo from "../images/logos/jojomobile.png";
-import Minimal from "../images/logos/minimal.svg";
-import MonitoLogo from "../images/logos/monito.svg";
-import MobileVikingsLogo from "../images/logos/mv.png";
 import NSNLogo from "../images/logos/nsn.svg";
 import ParabolLogo from "../images/logos/parabol.svg";
-import TastyCloudLogo from "../images/logos/tastycloud.png";
-import YearProgressLogo from "../images/logos/yearprogress.svg";
 
 export const RESUME_DATA = {
   name: "Kasey McFadden",
@@ -24,9 +9,9 @@ export const RESUME_DATA = {
   location: "New York, NY",
   locationLink: "https://www.google.com/maps/place/NY",
   about:
-    "Full Stack Engineer with experience building and shipping applications in various languages and frameworks",
+    "Full Stack Engineer with experience building and shipping applications in various languages and frameworks.",
   summary:
-    "As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
+    "Full Stack Engineer",
   avatarUrl: "",
   personalWebsiteUrl: "https://kaseym.dev",
   contact: {
@@ -72,11 +57,11 @@ export const RESUME_DATA = {
         "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
     },
     {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote"],
-      title: "Lead Android Developer → Full Stack Developer",
-      logo: ClevertechLogo,
+      company: "Capital One",
+      link: "",
+      badges: [],
+      title: "Software Engineer Intern",
+      logo: "",
       start: "2015",
       end: "2021",
       description:
@@ -87,7 +72,7 @@ export const RESUME_DATA = {
       link: "https://bsgroup.eu/",
       badges: [],
       title: "Android Developer → Lead Android Developer",
-      logo: JojoMobileLogo,
+      logo: "",
       start: "2012",
       end: "2015",
       description:
@@ -125,7 +110,7 @@ export const RESUME_DATA = {
         "WebRTC",
       ],
       description: "A platform to build and grow your online business",
-      logo: ConsultlyLogo,
+      logo: "",
       link: {
         label: "consultly.com",
         href: "https://consultly.com/",
@@ -136,7 +121,7 @@ export const RESUME_DATA = {
       techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
       description:
         "Browser extension that records everything happening in a web application",
-      logo: MonitoLogo,
+      logo: "",
       link: {
         label: "monito.dev",
         href: "https://monito.dev/",
@@ -147,7 +132,7 @@ export const RESUME_DATA = {
       techStack: ["Side Project", "Next.js", "MDX"],
       description:
         "My personal website and blog. Built with Next.js and Notion API",
-      logo: JarockiMeLogo,
+      logo: "",
       link: {
         label: "github.com",
         href: "https://jarocki.me/",
@@ -158,7 +143,7 @@ export const RESUME_DATA = {
       techStack: ["Side Project", "Next.js", "Puppeteer"],
       description:
         "Minimalist calendars, habit trackers and planners generator",
-      logo: Minimal,
+      logo: "",
       link: {
         label: "useminimal.com",
         href: "https://useminimal.com/",
@@ -169,7 +154,7 @@ export const RESUME_DATA = {
       techStack: ["Side Project", "Next.js", "Puppeteer"],
       description:
         "Generates beautiful wallpapers using random shapes and gradients",
-      logo: BarepapersLogo,
+      logo: "",
       link: {
         label: "barepapers.com",
         href: "https://barepapers.com/",
@@ -179,7 +164,7 @@ export const RESUME_DATA = {
       title: "Year progress",
       techStack: ["Side Project", "TypeScript", "Next.js"],
       description: "Tracks current year progress and displays a countdown",
-      logo: YearProgressLogo,
+      logo: "",
       link: {
         label: "getyearprogress.com",
         href: "https://getyearprogress.com/",
@@ -196,7 +181,7 @@ export const RESUME_DATA = {
       ],
       description:
         "The Agile meeting co-pilot that delivers better meetings with less effort",
-      logo: ParabolLogo,
+      logo: "",
       link: {
         label: "github.com",
         href: "https://parabol.co/",
@@ -214,7 +199,7 @@ export const RESUME_DATA = {
       ],
       description:
         "Creative collaboration platform that combines video conferencing and HD media streaming",
-      logo: EvercastLogo,
+      logo: "",
       link: {
         label: "evercast.us",
         href: "https://www.evercast.us/",
@@ -225,7 +210,7 @@ export const RESUME_DATA = {
       techStack: ["Lead Android Developer", "Android", "Kotlin"],
       description:
         "Android application for leading virtual mobile operator in Poland",
-      logo: MobileVikingsLogo,
+      logo: "",
       link: {
         label: "mobilevikings.pl",
         href: "https://mobilevikings.pl/",
@@ -236,7 +221,7 @@ export const RESUME_DATA = {
       techStack: ["Lead Android Developer", "Android", "Kotlin"],
       description:
         "Howdy is a place for you to join communities you care about",
-      logo: Howdy,
+      logo: "",
       link: {
         label: "play.google.com",
         href: "https://howdy.co/",
@@ -247,7 +232,7 @@ export const RESUME_DATA = {
       techStack: ["Lead Android Developer", "Android", "Kotlin"],
       description:
         "Android application for managing and displaying restaurant menus in kiosk mode",
-      logo: TastyCloudLogo,
+      logo: "",
       link: {
         label: "tastycloud.fr",
         href: "https://www.tastycloud.fr/",
@@ -258,21 +243,21 @@ export const RESUME_DATA = {
       techStack: ["Lead Android Developer", "Android", "Kotlin"],
       description:
         "Android application that helps with sharing your contact details",
-      logo: AmbitLogo,
+      logo: "",
     },
     {
       title: "Bim",
       techStack: ["Lead Android Developer", "Android", "Kotlin"],
       description:
         "Android application that helps with booking a table in a restaurants",
-      logo: BimLogo,
+      logo: "",
     },
     {
       title: "Canal Digital GO",
       techStack: ["Lead Android Developer", "Android", "Kotlin"],
       description:
         "Video streaming mobile application for Canal Digital subscribers",
-      logo: CDGOLogo,
+      logo: "",
     },
   ],
 } as const;

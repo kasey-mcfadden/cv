@@ -22,7 +22,7 @@ export default function Page() {
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.about}
+              {RESUME_DATA.summary}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
@@ -93,10 +93,14 @@ export default function Page() {
           </Avatar>
         </div>
         <Section>
-          <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
-          </p>
+        {RESUME_DATA.about && RESUME_DATA.about.trim() !== "" && (
+          <>
+            <h2 className="text-xl font-bold">About</h2>
+            <p className="text-pretty font-mono text-sm text-muted-foreground">
+              {RESUME_DATA.about}
+            </p>
+          </>
+        )}
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
@@ -106,10 +110,13 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                    {work.link !== "" ? (
                       <a className="hover:underline" href={work.link}>
                         {work.company}
                       </a>
-
+                    ) : (
+                      <span>{work.company}</span>
+                    )}
                       <span className="inline-flex gap-x-1">
                         {work.badges.map((badge) => (
                           <Badge
