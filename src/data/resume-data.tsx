@@ -1,73 +1,73 @@
-import ConsultlyLogo from "../images/logos/consultly.svg";
+import { GitHubIcon } from "../components/icons/GitHubIcon";
+import { LinkedInIcon } from "../components/icons/LinkedInIcon";
 import AmbitLogo from "../images/logos/ambit.png";
 import BarepapersLogo from "../images/logos/barepapers.svg";
 import BimLogo from "../images/logos/bim.png";
 import CDGOLogo from "../images/logos/cdgo.png";
 import ClevertechLogo from "../images/logos/clevertech.png";
+import ConsultlyLogo from "../images/logos/consultly.svg";
 import EvercastLogo from "../images/logos/evercast.svg";
 import Howdy from "../images/logos/howdy.png";
 import JarockiMeLogo from "../images/logos/jarocki.svg";
 import JojoMobileLogo from "../images/logos/jojomobile.png";
+import Minimal from "../images/logos/minimal.svg";
 import MonitoLogo from "../images/logos/monito.svg";
 import MobileVikingsLogo from "../images/logos/mv.png";
 import NSNLogo from "../images/logos/nsn.svg";
 import ParabolLogo from "../images/logos/parabol.svg";
 import TastyCloudLogo from "../images/logos/tastycloud.png";
 import YearProgressLogo from "../images/logos/yearprogress.svg";
-import Minimal from "../images/logos/minimal.svg";
-import { GitHubIcon } from "../components/icons/GitHubIcon";
-import { LinkedInIcon } from "../components/icons/LinkedInIcon";
-import { XIcon } from "../components/icons/XIcon";
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  name: "Kasey McFadden",
+  initials: "KM",
+  location: "New York, NY",
+  locationLink: "https://www.google.com/maps/place/NY",
   about:
-    "Full Stack Engineer focused on building products with extra attention to details",
+    "Full Stack Engineer with experience building and shipping applications in various languages and frameworks",
   summary:
     "As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  avatarUrl: "",
+  personalWebsiteUrl: "https://kaseym.dev",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "kaseysmcfadden(at)gmail(dot)com",
+    tel: "",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/kasey-mcfadden",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/kaseymcfadden/",
         icon: LinkedInIcon,
       },
-      {
-        name: "X",
-        url: "https://x.com/BartoszJarocki",
-        icon: XIcon,
-      },
+      // {
+      //   name: "X",
+      //   url: "https://x.com/BartoszJarocki",
+      //   icon: XIcon,
+      // },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Princeton University",
+      degree: "Bachelor of Engineering in Computer Science",
+      departmentalGpa: "3.63",
+      start: "",
+      end: "2022",
     },
   ],
   work: [
     {
-      company: "Parabol",
-      link: "https://parabol.co",
+      company: "Microsoft",
+      link: "",
       badges: ["Remote"],
-      title: "Senior Full Stack Developer",
+      title: "Software Engineer",
       logo: ParabolLogo,
-      start: "2021",
-      end: "2024",
+      start: "2022",
+      end: "",
       description:
         "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
     },
