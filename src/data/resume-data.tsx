@@ -1,7 +1,5 @@
 import { GitHubIcon } from "../components/icons/GitHubIcon";
 import { LinkedInIcon } from "../components/icons/LinkedInIcon";
-import NSNLogo from "../images/logos/nsn.svg";
-import ParabolLogo from "../images/logos/parabol.svg";
 
 export const RESUME_DATA = {
   name: "Kasey McFadden",
@@ -50,7 +48,7 @@ export const RESUME_DATA = {
       link: "",
       badges: ["Remote"],
       title: "Software Engineer",
-      logo: ParabolLogo,
+      logo: "",
       start: "2022",
       end: "",
       description:
@@ -83,7 +81,7 @@ export const RESUME_DATA = {
       link: "https://www.nokia.com",
       badges: [],
       title: "C/C++ Developer",
-      logo: NSNLogo,
+      logo: "",
       start: "2010",
       end: "2012",
       description: "Creating and testing software for LTE base stations",
