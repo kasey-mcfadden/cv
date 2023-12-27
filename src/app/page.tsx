@@ -110,7 +110,7 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
-          {RESUME_DATA.work.map((work) => {
+          {RESUME_DATA.work.map((work: any) => {
             return (
               <Card key={work.company}>
                 <CardHeader>
@@ -124,7 +124,7 @@ export default function Page() {
                       <span>{work.company}</span>
                     )}
                       <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
+                        {work.badges.map((badge: any) => (
                           <Badge
                             variant="secondary"
                             className="align-middle text-xs"
