@@ -1,16 +1,16 @@
-import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
-import { Card, CardHeader, CardContent } from "../components/ui/card";
-import { Badge } from "../components/ui/badge";
-import { CommandMenu } from "../components/command-menu";
-import { Metadata } from "next";
-import { Section } from "../components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
-import { Button } from "../components/ui/button";
-import { RESUME_DATA } from "../data/resume-data";
+import { Metadata } from "next";
+import { CommandMenu } from "../components/command-menu";
 import { ProjectCard } from "../components/project-card";
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
+import { Card, CardContent, CardHeader } from "../components/ui/card";
+import { Section } from "../components/ui/section";
+import { RESUME_DATA } from "../data/resume-data";
 
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+  title: `${RESUME_DATA.name} | CV`,
   description: RESUME_DATA.summary,
 };
 
@@ -123,7 +123,7 @@ export default function Page() {
                       </span>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end}
+                      {work.start} - {work.end === "" ? "Present" : work.end}
                     </div>
                   </div>
 
@@ -149,11 +149,16 @@ export default function Page() {
                       {education.school}
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
+                      {education.start && education.end ? (
+                        `${education.start} - ${education.end}`
+                      ) : (
+                        `Graduated ${education.end}`
+                      )}
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="mt-2">In-Major GPA: {education.departmentalGpa}</CardContent>
               </Card>
             );
           })}
