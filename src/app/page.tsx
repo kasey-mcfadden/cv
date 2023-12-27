@@ -34,6 +34,12 @@ export default function Page() {
                 {RESUME_DATA.location}
               </a>
             </p>
+            <a 
+              className="max-w-md text-pretty font-mono text-sm hover:underline"
+              href={RESUME_DATA.personalWebsiteUrl}
+            >
+              {RESUME_DATA.personalWebsiteUrl.replace(/^https?:\/\//, '')}
+            </a>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
@@ -130,7 +136,13 @@ export default function Page() {
                       </span>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end === "" ? "Present" : work.end}
+                      {work.start ? (
+                        <>
+                          {work.start} - {work.end === "" ? "Present" : work.end}
+                        </>
+                      ) : (
+                        <>{work.end}</>
+                      )}
                     </div>
                   </div>
 
