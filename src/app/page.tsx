@@ -1,3 +1,4 @@
+import { PrintButton } from "@/components/print-button";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Metadata } from "next";
 import { CommandMenu } from "../components/command-menu";
@@ -38,7 +39,7 @@ export default function Page() {
               className="max-w-md text-pretty font-mono text-sm hover:underline"
               href={RESUME_DATA.personalWebsiteUrl}
             >
-              {RESUME_DATA.personalWebsiteUrl.replace(/^https?:\/\//, '')}
+              {RESUME_DATA.personalWebsiteUrl?.replace("https://", "").replace("www.", "")}
             </a>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
@@ -78,6 +79,7 @@ export default function Page() {
                   </a>
                 </Button>
               ))}
+              <PrintButton/>
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
@@ -145,13 +147,23 @@ export default function Page() {
                       )}
                     </div>
                   </div>
-
                   <h4 className="font-mono text-sm leading-none">
                     {work.title}
                   </h4>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">
                   {work.description}
+                  <div className="flex flex-wrap gap-1">
+                    {work.technologies.map((technology: any) => (
+                      <Badge 
+                        variant="outline"
+                        className="align-middle text-xs"
+                        key={technology}
+                      >
+                        {technology}
+                      </Badge>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             );
@@ -190,8 +202,7 @@ export default function Page() {
             })}
           </div>
         </Section>
-
-        <Section className="print-force-new-page scroll-mb-16">
+        <Section className="scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {

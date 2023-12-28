@@ -28,7 +28,7 @@ export const RESUME_DATA = {
       },
       // {
       //   name: "X",
-      //   url: "https://x.com/BartoszJarocki",
+      //   url: "https://x.com/",
       //   icon: XIcon,
       // },
     ],
@@ -46,13 +46,13 @@ export const RESUME_DATA = {
     {
       company: "Microsoft",
       link: "",
-      badges: ["Remote"],
+      badges: ["Hybrid Remote"],
       title: "Software Engineer",
       logo: "",
       start: "2022",
       end: "",
-      description:
-        "Joined the Experience and Devices org, working on the Office team to develop and enhance Office applications and services. Technologies: React, TypeScript, GraphQL",
+      description: "Joined the Experience and Devices org, working on the Office team to develop and enhance Office applications and services. Contributing to the content workflow of support.microsoft.com, a high-traffic site with 1B+ annual users.",
+      technologies: ["C#", "TypeScript", "React", "Redux", "GraphQL"],
     },
     {
       company: "Capital One",
@@ -62,8 +62,8 @@ export const RESUME_DATA = {
       logo: "",
       start: "",
       end: "Summer 2021",
-      description:
-        "Developed a web application utilizing React, Express, SQL, TypeScript and integrated data tools such as Tableau and QuickSight, modernizing static sites and enabling streamlined business analytics for over 30,000 users across multiple teams. Technologies: Android, Kotlin, React, TypeScript, GraphQL",
+      description: "Developed a web application to modernize static sites, integrating Tableau and QuickSight, and enabling streamlined business analytics for over 30,000 users across multiple teams. Utilized Capital One's learning resources to obtain Certified Secure Software Engineer (CSSE) and CSSE Pro certifications, investing 20+ hours in study and assessment during internship downtime.",
+      technologies: ["TypeScript", "React", "Express.js", "SQL"],
     },
     {
       company: "Merck",
@@ -73,8 +73,8 @@ export const RESUME_DATA = {
       logo: "",
       start: "",
       end: "Summer 2020",
-      description:
-        "Developed a computer vision system using Python, OpenCV, NumPy, FRCNN and a mechanical disintegration apparatus, automating pill disintegration analysis and providing crucial data while eliminating manual analysis. ◦ Designed interactive visualization maps with Python, Golang, D3.js to monitor pharmaceutical product distribution, leveraging Merck’s Blockchain API to combat fraud.",
+      description: "Developed a computer vision system using FRCNN and a mechanical disintegration apparatus, automating pill disintegration analysis and providing crucial data while eliminating manual analysis. Designed interactive visualization maps to monitor pharmaceutical product distribution, leveraging Merck's Blockchain API to combat fraud.",
+      technologies: ["Python", "Go", "JavaScript", "D3.js", "OpenCV", "NumPy"],
     },
     {
       company: "Venus Technology Ventures",
@@ -84,177 +84,81 @@ export const RESUME_DATA = {
       logo: "",
       start: "",
       end: "Summer 2019",
-      description: "Integrated Stanford CoreNLP pipeline into a fintech voice platform using Go to recognize natural language patterns and create custom user vocabulary, contributing to technical documentation for a patent application.",
+      description: "Integrated Stanford CoreNLP pipeline into a fintech voice platform to recognize natural language patterns and create custom user vocabulary, contributing to technical documentation for a patent application. Led app refactoring effort, integrating 10+ communication APIs, migrating the UI to Sencha, adding authentication flow and voice AI.",
+      technologies: ["Go", "JavaScript", "Sencha", "NLP"],
     },
   ],
   skills: [
-    "JavaScript",
-    "TypeScript",
-    "React/Next.js/Remix",
+    "C#",
+    "Python",
+    "Golang",
+    "Java",
+    "JavaScript/TypeScript",
+    "React",
+    "Redux",
+    "Next.js",
     "Node.js",
+    "Express.js",
+    "Bootstrap",
     "GraphQL",
-    "Relay",
-    "WebRTC",
+    "Swagger",
+    "Azure",
+    "AWS",
+    "Postgres",
+    "SQL",
   ],
   projects: [
     {
-      title: "Consultly",
+      title: "TigerStudy",
       techStack: [
-        "Side Project",
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
+        "Python",
+        "JavaScript",
       ],
-      description: "A platform to build and grow your online business",
+      description: "Study group finder made for Princeton's McGraw Center for Teaching and Learning. Now maintained by Princeton.",
       logo: "",
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "tigerapps.org",
+        href: "https://tigerapps.org/",
       },
     },
     {
-      title: "Monito",
-      techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
+      title: "MerckMap",
+      techStack: ["Hackathon", "Lead Developer", "Python", "Go", "JavaScript", "D3.js"],
       description:
-        "Browser extension that records everything happening in a web application",
+        "Interactive map-based data visualization model that sorts data from Merck's Blockchain API. Won 1st Place, Merck Blockchain API Challenge @ HackRU.",
       logo: "",
       link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
+        label: "kasey-mcfadden.github.io/hack_ru",
+        href: "https://kasey-mcfadden.github.io/hack_ru/",
       },
     },
     {
-      title: "Jarocki.me",
-      techStack: ["Side Project", "Next.js", "MDX"],
+      title: "NFThesis",
+      techStack: ["Solidity", "JavaScript", "Ethers.js", "Hardhat", "Alchemy"],
       description:
-        "My personal website and blog. Built with Next.js and Notion API",
+        "Deployed a smart contract on the Ropsten testnet allowing students to mint their senior theses as NFTs.",
       logo: "",
       link: {
-        label: "github.com",
-        href: "https://jarocki.me/",
+        label: "github.com/kasey-mcfadden/NFThesis-Contract",
+        href: "https://github.com/kasey-mcfadden/NFThesis-Contract"
+      }
+    },
+    {
+      title: "Adaptive Replacement Cache",
+      techStack: ["Go"],
+      description:
+        "A cache optimized to favor either recency or frequency, improving hit ratio.",
+      logo: "",
+      link: {
+        label: "github.com/kasey-mcfadden/arc",
+        href: "https://github.com/kasey-mcfadden/arc",
       },
     },
     {
-      title: "Minimal",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
+      title: "Edgeways",
+      techStack: ["Python", "JavaScript"],
       description:
-        "Minimalist calendars, habit trackers and planners generator",
-      logo: "",
-      link: {
-        label: "useminimal.com",
-        href: "https://useminimal.com/",
-      },
-    },
-    {
-      title: "Barepapers",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
-      description:
-        "Generates beautiful wallpapers using random shapes and gradients",
-      logo: "",
-      link: {
-        label: "barepapers.com",
-        href: "https://barepapers.com/",
-      },
-    },
-    {
-      title: "Year progress",
-      techStack: ["Side Project", "TypeScript", "Next.js"],
-      description: "Tracks current year progress and displays a countdown",
-      logo: "",
-      link: {
-        label: "getyearprogress.com",
-        href: "https://getyearprogress.com/",
-      },
-    },
-    {
-      title: "Parabol",
-      techStack: [
-        "Full Stack Developer",
-        "TypeScript",
-        "React",
-        "Node.js",
-        "GraphQL",
-      ],
-      description:
-        "The Agile meeting co-pilot that delivers better meetings with less effort",
-      logo: "",
-      link: {
-        label: "github.com",
-        href: "https://parabol.co/",
-      },
-    },
-    {
-      title: "Evercast",
-      techStack: [
-        "Lead Frontend Developer",
-
-        "TypeScript",
-        "React",
-        "Node.js",
-        "GraphQL",
-      ],
-      description:
-        "Creative collaboration platform that combines video conferencing and HD media streaming",
-      logo: "",
-      link: {
-        label: "evercast.us",
-        href: "https://www.evercast.us/",
-      },
-    },
-    {
-      title: "Mobile Vikings",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for leading virtual mobile operator in Poland",
-      logo: "",
-      link: {
-        label: "mobilevikings.pl",
-        href: "https://mobilevikings.pl/",
-      },
-    },
-    {
-      title: "Howdy",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Howdy is a place for you to join communities you care about",
-      logo: "",
-      link: {
-        label: "play.google.com",
-        href: "https://howdy.co/",
-      },
-    },
-    {
-      title: "Tastycloud",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for managing and displaying restaurant menus in kiosk mode",
-      logo: "",
-      link: {
-        label: "tastycloud.fr",
-        href: "https://www.tastycloud.fr/",
-      },
-    },
-    {
-      title: "Ambit",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with sharing your contact details",
-      logo: "",
-    },
-    {
-      title: "Bim",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with booking a table in a restaurants",
-      logo: "",
-    },
-    {
-      title: "Canal Digital GO",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Video streaming mobile application for Canal Digital subscribers",
+        "Twitter-like platform incorporating periodic foreign language quizzes within your feed, tailored to the tweets you encounter.",
       logo: "",
     },
   ],
