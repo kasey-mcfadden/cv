@@ -6,10 +6,10 @@ export const RESUME_DATA = {
   initials: "KM",
   location: "New York, NY",
   locationLink: "https://www.google.com/maps/place/NY",
-  about:
-    "Full Stack Engineer with experience building and shipping applications in various languages and frameworks.",
   summary:
     "Full Stack Engineer",
+  about:
+    "Full Stack Engineer with experience building and shipping applications in various languages and frameworks. Big fan of running, mountains, DIY-ing.",
   avatarUrl: "",
   personalWebsiteUrl: "https://kaseym.dev",
   contact: {
@@ -57,18 +57,18 @@ export const RESUME_DATA = {
     {
       company: "Capital One",
       link: "",
-      badges: [],
+      badges: ["Remote"],
       title: "Software Engineer Intern",
       logo: "",
       start: "",
       end: "Summer 2021",
-      description: "Developed a web application to modernize static sites, integrating Tableau and QuickSight, and enabling streamlined business analytics for over 30,000 users across multiple teams. Utilized Capital One's learning resources to obtain Certified Secure Software Engineer (CSSE) and CSSE Pro certifications, investing 20+ hours in study and assessment during internship downtime.",
+      description: "Developed a web application to modernize static sites, integrating Tableau and QuickSight, and enabling streamlined business analytics for 30k+ users across many teams. Utilized Capital One's learning resources to obtain Certified Secure Software Engineer (CSSE) and CSSE Pro certifications.",
       technologies: ["TypeScript", "React", "Express.js", "SQL"],
     },
     {
       company: "Merck",
       link: "",
-      badges: [],
+      badges: ["Remote"],
       title: "Software Engineer Intern",
       logo: "",
       start: "",
@@ -84,7 +84,7 @@ export const RESUME_DATA = {
       logo: "",
       start: "",
       end: "Summer 2019",
-      description: "Integrated Stanford CoreNLP pipeline into a fintech voice platform to recognize natural language patterns and create custom user vocabulary, contributing to technical documentation for a patent application. Led app refactoring effort, integrating 10+ communication APIs, migrating the UI to Sencha, adding authentication flow and voice AI.",
+      description: "Integrated Stanford CoreNLP pipeline into a fintech voice platform to recognize natural language patterns and create custom user vocabulary, contributing to patent application. Led app refactoring effort, integrating 10+ APIs, migrating UI to Sencha, adding authentication flow and voice AI.",
       technologies: ["Go", "JavaScript", "Sencha", "NLP"],
     },
   ],
