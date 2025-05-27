@@ -4,12 +4,12 @@ import { LinkedInIcon } from "../components/icons/LinkedInIcon";
 export const RESUME_DATA = {
   name: "Kasey McFadden",
   initials: "KM",
-  location: "New York, NY",
+  location: "New York City",
   locationLink: "https://www.google.com/maps/place/NY",
   summary:
     "Full Stack Engineer",
   about:
-    "Full Stack Engineer with experience building and shipping applications in various languages and frameworks. Big fan of running, mountains, DIY-ing.",
+    "Full Stack Engineer with over 8 years of experience building and shipping applications in various languages and frameworks. Passionate about clean code, documentation, and continuous learning. Big fan of running, mountains, DIY-ing.",
   avatarUrl: "",
   personalWebsiteUrl: "https://kaseym.dev",
   contact: {
@@ -51,8 +51,8 @@ export const RESUME_DATA = {
       logo: "",
       start: "2022",
       end: "",
-      description: "Joined the Experience and Devices org, working on the Office team to develop and enhance Office applications and services. Contributing to the content workflow of support.microsoft.com, a high-traffic site with 1B+ annual users.",
-      technologies: ["C#", "TypeScript", "React", "Redux", "GraphQL"],
+      description: "Enhanced the C3 content management system, used by Microsoft employees to manage content for support.microsoft.com (100M+ MAU). Delivered 15+ full-stack features ahead of schedule. Contributed to the development of an AI-driven Content Assistant LLM using OpenAI and Copilot, which reduced content authoring time by over 50%. Achieved a 76% average performance improvement on sitewide permissions retrieval by refining concurrency techniques. Led multiple team-wide privacy and security initiatives, including implementing new data encryption standards and conducting regular security audits.",
+      technologies: ["C#", "TypeScript", "React", "Redux", "GraphQL", "Azure DevOps", "Copilot", "OpenAI"],
     },
     {
       company: "Capital One",
@@ -62,7 +62,7 @@ export const RESUME_DATA = {
       logo: "",
       start: "",
       end: "Summer 2021",
-      description: "Developed a web application to modernize static sites, integrating Tableau and QuickSight, and enabling streamlined business analytics for 30k+ users across many teams. Utilized Capital One's learning resources to obtain Certified Secure Software Engineer (CSSE) and CSSE Pro certifications.",
+      description: "Developed a React web application with Express.js and SQL to replace static sites for 30k+ users, integrating Tableau and QuickSight for streamlined business analytics. Earned Capital One's Certified Secure Software Engineer (CSSE) and CSSE Pro certifications, demonstrating commitment to secure coding practices.",
       technologies: ["TypeScript", "React", "Express.js", "SQL"],
     },
     {
@@ -73,7 +73,7 @@ export const RESUME_DATA = {
       logo: "",
       start: "",
       end: "Summer 2020",
-      description: "Developed a computer vision system using FRCNN and a mechanical disintegration apparatus, automating pill disintegration analysis and providing crucial data while eliminating manual analysis. Designed interactive visualization maps to monitor pharmaceutical product distribution, leveraging Merck's Blockchain API to combat fraud.",
+      description: "Developed a Python-based computer vision system using FRCNN and OpenCV to automate pill disintegration analysis, reducing manual analysis time by 60%. Designed interactive D3.js visualization maps, leveraging Merck's Blockchain API and Go backend to monitor pharmaceutical product distribution and combat fraud.",
       technologies: ["Python", "Go", "JavaScript", "D3.js", "OpenCV", "NumPy"],
     },
     {
@@ -84,7 +84,7 @@ export const RESUME_DATA = {
       logo: "",
       start: "",
       end: "Summer 2019",
-      description: "Integrated Stanford CoreNLP pipeline into a fintech voice platform to recognize natural language patterns and create custom user vocabulary, contributing to patent application. Led app refactoring effort, integrating 10+ APIs, migrating UI to Sencha, adding authentication flow and voice AI.",
+      description: "Integrated Stanford CoreNLP pipeline into a Go-based fintech voice platform, enabling natural language pattern recognition and custom user vocabulary, contributing to a patent application. Led a refactoring effort, integrating 10+ APIs, migrating the UI to Sencha, and adding authentication and voice AI capabilities.",
       technologies: ["Go", "JavaScript", "Sencha", "NLP"],
     },
   ],
