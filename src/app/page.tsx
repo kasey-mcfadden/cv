@@ -11,37 +11,21 @@ import { Section } from "../components/ui/section";
 import { RESUME_DATA } from "../data/resume-data";
 
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | CV`,
+  title: `${RESUME_DATA.name.replace(/ /g, "_")}_CV`,
   description: RESUME_DATA.summary,
 };
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
-        <div className="flex items-center justify-between">
-          <div className="flex-1 space-y-1.5">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16">
+      <section className="mx-auto w-full max-w-2xl space-y-6 bg-white">
+        <div className="flex items-start justify-between md:flex-row">
+          <div className="flex-1">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+            <p className="max-w-md text-pretty font-mono text-sm text-gray-700">
               {RESUME_DATA.summary}
             </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
-              <a
-                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-                href={RESUME_DATA.locationLink}
-                target="_blank"
-              >
-                <GlobeIcon className="h-3 w-3" />
-                {RESUME_DATA.location}
-              </a>
-            </p>
-            <a 
-              className="max-w-md text-pretty font-mono text-sm hover:underline"
-              href={RESUME_DATA.personalWebsiteUrl}
-            >
-              {RESUME_DATA.personalWebsiteUrl?.replace("https://", "").replace("www.", "")}
-            </a>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="flex mt-2 gap-x-1 pt-1 font-mono text-sm text-gray-700 print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
                   className="h-8 w-8"
@@ -81,43 +65,62 @@ export default function Page() {
               ))}
               <PrintButton/>
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
-              {RESUME_DATA.contact.email ? (
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                  <span className="underline">{RESUME_DATA.contact.email}</span>
-                </a>
-              ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
-                </a>
-              ) : null}
-            </div>
           </div>
 
-          <Avatar className="h-28 w-28">
+          {/* <Avatar className="h-28 w-28">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-          </Avatar>
+          </Avatar> */}
+          <div className="flex flex-col items-end gap-y-0.5 text-gray-700">
+            <p className="max-w-md mt-2 items-center text-pretty font-mono text-sm">
+                <a
+                  className="inline-flex gap-x-2 align-baseline leading-none hover:underline"
+                  href={RESUME_DATA.locationLink}
+                  target="_blank"
+                >
+                  <GlobeIcon className="h-3 w-3" />
+                  {RESUME_DATA.location}
+                </a>
+            </p>
+            <a 
+                className="max-w-md text-pretty font-mono text-sm hover:underline"
+                href={RESUME_DATA.personalWebsiteUrl}
+            >
+              {RESUME_DATA.personalWebsiteUrl?.replace("https://", "").replace("www.", "")}
+            </a>
+            <div className="hidden flex-col gap-x-1 font-mono text-sm text-gray-700 print:flex">
+                {RESUME_DATA.contact.email ? (
+                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                    <span>{RESUME_DATA.contact.email}</span>
+                  </a>
+                ) : null}
+                {RESUME_DATA.contact.tel ? (
+                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                    <span>{RESUME_DATA.contact.tel}</span>
+                  </a>
+                ) : null}
+            </div>
+          </div>
         </div>
+        
         <Section>
         {RESUME_DATA.about && RESUME_DATA.about.trim() !== "" && (
           <>
-            <h2 className="text-xl font-bold">About</h2>
-            <p className="text-pretty font-mono text-sm text-muted-foreground">
+            <h2 className="text-xl font-bold border-b border-gray-300">About</h2>
+            <p className="text-pretty font-mono text-sm text-gray-700">
               {RESUME_DATA.about}
             </p>
           </>
         )}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+          <h2 className="text-xl font-bold border-b border-gray-300">Work Experience</h2>
           {RESUME_DATA.work.map((work: any) => {
             return (
               <Card key={work.company}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 text-lg font-semibold leading-none">
                     {work.link !== "" ? (
                       <a className="hover:underline" href={work.link}>
                         {work.company}
@@ -125,11 +128,11 @@ export default function Page() {
                     ) : (
                       <span>{work.company}</span>
                     )}
-                      <span className="inline-flex gap-x-1">
+                      <span className="ml-2 inline-flex gap-x-1">
                         {work.badges.map((badge: any) => (
                           <Badge
                             variant="secondary"
-                            className="align-middle text-xs"
+                            className="text-xs border-gray-300"
                             key={badge}
                           >
                             {badge}
@@ -137,7 +140,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-gray-700">
                       {work.start ? (
                         <>
                           {work.start} - {work.end === "" ? "Present" : work.end}
@@ -151,9 +154,19 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
+                <CardContent className="mt-2 text-xs text-gray-700">
                   {work.description}
-                  <div className="flex flex-wrap gap-1">
+                  {work.bullets && work.bullets.length > 0 && (
+                    <ul className="mt-2 space-y-1">
+                      {work.bullets.map((bullet: string, idx: number) => (
+                        <li key={idx}>
+                          <span className="mr-2">–</span>
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <div className="mt-2 flex flex-wrap gap-1">
                     {work.technologies.map((technology: any) => (
                       <Badge 
                         variant="outline"
@@ -170,7 +183,7 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Education</h2>
+          <h2 className="text-xl font-bold border-b border-gray-300">Education</h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
@@ -179,7 +192,7 @@ export default function Page() {
                     <h3 className="font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-gray-700">
                       {education.start && education.end ? (
                         `${education.start} - ${education.end}`
                       ) : (
@@ -188,22 +201,28 @@ export default function Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
-                <CardContent className="mt-2">In-Major GPA: {education.departmentalGpa}</CardContent>
+                <CardContent className="text-gray-700">{education.degree}</CardContent>
+                {/* <CardContent className="text-gray-700">In-Major GPA: {education.departmentalGpa}</CardContent> */}
               </Card>
             );
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
+          <h2 className="text-xl font-bold border-b border-gray-300">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
+              return <Badge 
+                variant="default"
+                className="text-xs border-gray-300" 
+                key={skill}
+              >
+                {skill}
+              </Badge>;
             })}
           </div>
         </Section>
         <Section className="scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
+          <h2 className="text-xl font-bold border-b border-gray-300">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
               return (

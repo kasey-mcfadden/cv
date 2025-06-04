@@ -7,13 +7,13 @@ export const RESUME_DATA = {
   location: "New York City",
   locationLink: "https://www.google.com/maps/place/NY",
   summary:
-    "Full Stack Engineer",
+    "Full Stack Software Engineer",
   about:
-    "Full Stack Engineer with over 8 years of experience building and shipping applications in various languages and frameworks. Passionate about clean code, documentation, and continuous learning. Big fan of running, mountains, DIY-ing.",
+    "Full Stack Software Engineer with 7+ years of experience building and shipping applications in various languages and frameworks. Passionate about clean code, documentation, and continuous learning. Big fan of running, mountains, DIY-ing.",
   avatarUrl: "",
   personalWebsiteUrl: "https://kaseym.dev",
   contact: {
-    email: "kaseysmcfadden(at)gmail(dot)com",
+    email: "kaseysmcfadden@gmail.com",
     tel: "",
     social: [
       {
@@ -51,7 +51,15 @@ export const RESUME_DATA = {
       logo: "",
       start: "2022",
       end: "",
-      description: "Enhanced the C3 content management system, used by Microsoft employees to manage content for support.microsoft.com (100M+ MAU). Delivered 15+ full-stack features ahead of schedule. Contributed to the development of an AI-driven Content Assistant LLM using OpenAI and Copilot, which reduced content authoring time by over 50%. Achieved a 76% average performance improvement on sitewide permissions retrieval by refining concurrency techniques. Led multiple team-wide privacy and security initiatives, including implementing new data encryption standards and conducting regular security audits.",
+      description: "Developed the C3 content management system, directly improving content workflow for end-user Help, Support, and Learning Experiences across Microsoft's product suite, impacting high-traffic sites (3B+ annual impressions).",
+      bullets: [
+        "Achieved a 76\% average performance improvement on permissions retrieval by refining concurrency techniques.",
+        "Developed a performance testing suite for the federated gateway, identifying an 80\% improvement in federated gateway durations. ",
+        "Delivered full stack Product-Level Permissions feature ahead of deadline, architecting new site performance graphs through Geneva to target improvements for users. ",
+        "Led .NET learning and upgrade initiative for entire codebase, driving engineering excellence and continuous learning. ",
+        "Authored documentation on best practices for creating user stories, including custom team-specific LLM prompts to supercharge dev cycles. ",
+        "Led multiple team-wide privacy and security initiatives."
+      ],
       technologies: ["C#", "TypeScript", "React", "Redux", "GraphQL", "Azure DevOps", "Copilot", "OpenAI"],
     },
     {
@@ -118,7 +126,7 @@ export const RESUME_DATA = {
         "Python",
         "JavaScript",
       ],
-      description: "Study group finder made for Princeton's McGraw Center for Teaching and Learning. Now maintained by Princeton.",
+      description: "Group finder built for Princeton's McGraw Center for Teaching and Learning. Still in active use by students.",
       logo: "",
       link: {
         label: "tigerapps.org",

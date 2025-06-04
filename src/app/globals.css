@@ -78,3 +78,12 @@
 .print-force-new-page {
   page-break-before: always;
 }
+
+/* Hide browser print header/footer */
+@media print {
+  @page {
+    margin: 0.5in;
+    /* Chrome/Edge/Firefox support */
+    size: auto;
+  }
+}
