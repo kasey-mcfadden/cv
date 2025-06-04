@@ -49,7 +49,7 @@ export const RESUME_DATA = {
       badges: [],
       title: "Software Engineer",
       logo: "",
-      start: "2022",
+      start: "August 2022",
       end: "",
       description: "Developed the C3 content management system, directly improving content workflow for end-user Help, Support, and Learning Experiences across Microsoft's product suite, impacting high-traffic sites (3B+ annual impressions).",
       bullets: [

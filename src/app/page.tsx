@@ -16,23 +16,42 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto md:p-12">
       <section className="mx-auto w-full max-w-2xl space-y-4 bg-white">
         <div className="flex items-start justify-between md:flex-row">
           <div className="flex-1">
             <h1 className="text-xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty text-sm">
-              {RESUME_DATA.summary}
-            </p>
-            <p className="max-w-md items-center text-pretty text-sm">
-                <a
+            <div className="flex items-center justify-between w-full">
+              <p className="text-pretty text-sm">
+                {RESUME_DATA.summary}
+              </p>
+              <a 
+                  className="text-pretty text-sm hover:underline whitespace-nowrap"
+                  href={RESUME_DATA.personalWebsiteUrl}
+              >
+                {RESUME_DATA.personalWebsiteUrl?.replace("https://", "").replace("www.", "")}
+              </a>
+            </div>
+            <div className="flex items-center justify-between w-full">
+              <p className="max-w-md items-center text-pretty text-sm">
+                  <a
+                    className="inline-flex gap-x-2 align-baseline leading-none hover:underline"
+                    href={RESUME_DATA.locationLink}
+                    target="_blank"
+                  >
+                    {RESUME_DATA.location}
+                  </a>
+              </p>
+              {RESUME_DATA.contact.email ? (
+                <p className="max-w-md items-center text-pretty text-sm">
+                  <a 
                   className="inline-flex gap-x-2 align-baseline leading-none hover:underline"
-                  href={RESUME_DATA.locationLink}
-                  target="_blank"
-                >
-                  {RESUME_DATA.location}
-                </a>
-            </p>
+                  href={`mailto:${RESUME_DATA.contact.email}`}>
+                    <span>{RESUME_DATA.contact.email}</span>
+                  </a>
+                </p>
+              ) : null}
+            </div>
             <div className="flex mt-1 gap-x-1 pt-1 text-sm print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
@@ -74,34 +93,13 @@ export default function Page() {
               <PrintButton/>
             </div>
           </div>
-          <div className="flex flex-col items-end">
-            
-            <a 
-                className="max-w-md text-pretty text-sm hover:underline"
-                href={RESUME_DATA.personalWebsiteUrl}
-            >
-              {RESUME_DATA.personalWebsiteUrl?.replace("https://", "").replace("www.", "")}
-            </a>
-            <div className="flex-col gap-x-1 text-sm hover:underline">
-                {RESUME_DATA.contact.email ? (
-                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                    <span>{RESUME_DATA.contact.email}</span>
-                  </a>
-                ) : null}
-                {RESUME_DATA.contact.tel ? (
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <span>{RESUME_DATA.contact.tel}</span>
-                  </a>
-                ) : null}
-            </div>
-          </div>
         </div>
         
         <Section>
         {RESUME_DATA.about && RESUME_DATA.about.trim() !== "" && (
           <>
             <h2 className="text-xl font-bold border-b border-gray-300">About</h2>
-            <p className="text-pretty  text-sm ">
+            <p className="text-pretty text-sm mt-0">
               {RESUME_DATA.about}
             </p>
           </>
@@ -134,7 +132,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums ">
+                    <div className="text-sm italic tabular-nums">
                       {work.start ? (
                         <>
                           {work.start} - {work.end === "" ? "Present" : work.end}
