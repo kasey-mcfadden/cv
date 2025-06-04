@@ -4,12 +4,12 @@ import { LinkedInIcon } from "../components/icons/LinkedInIcon";
 export const RESUME_DATA = {
   name: "Kasey McFadden",
   initials: "KM",
-  location: "New York City",
+  location: "New York, NY",
   locationLink: "https://www.google.com/maps/place/NY",
   summary:
     "Full Stack Software Engineer",
   about:
-    "Full Stack Software Engineer with 7+ years of experience building and shipping applications in various languages and frameworks. Passionate about clean code, documentation, and continuous learning. Big fan of running, mountains, DIY-ing.",
+    "Full Stack Software Engineer with 7+ years of experience building and shipping applications in various languages and frameworks. Passionate about clean code, documentation, and continuous learning.",
   avatarUrl: "",
   personalWebsiteUrl: "https://kaseym.dev",
   contact: {
@@ -46,7 +46,7 @@ export const RESUME_DATA = {
     {
       company: "Microsoft",
       link: "",
-      badges: ["Hybrid Remote"],
+      badges: [],
       title: "Software Engineer",
       logo: "",
       start: "2022",
@@ -65,7 +65,7 @@ export const RESUME_DATA = {
     {
       company: "Capital One",
       link: "",
-      badges: ["Remote"],
+      badges: [],
       title: "Software Engineer Intern",
       logo: "",
       start: "",
@@ -76,7 +76,7 @@ export const RESUME_DATA = {
     {
       company: "Merck",
       link: "",
-      badges: ["Remote"],
+      badges: [],
       title: "Software Engineer Intern",
       logo: "",
       start: "",

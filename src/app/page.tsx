@@ -3,7 +3,6 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Metadata } from "next";
 import { CommandMenu } from "../components/command-menu";
 import { ProjectCard } from "../components/project-card";
-import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader } from "../components/ui/card";
@@ -18,17 +17,26 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-6 bg-white">
+      <section className="mx-auto w-full max-w-2xl space-y-4 bg-white">
         <div className="flex items-start justify-between md:flex-row">
           <div className="flex-1">
-            <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-gray-700">
+            <h1 className="text-xl font-bold">{RESUME_DATA.name}</h1>
+            <p className="max-w-md text-pretty text-sm">
               {RESUME_DATA.summary}
             </p>
-            <div className="flex mt-2 gap-x-1 pt-1 font-mono text-sm text-gray-700 print:hidden">
+            <p className="max-w-md items-center text-pretty text-sm">
+                <a
+                  className="inline-flex gap-x-2 align-baseline leading-none hover:underline"
+                  href={RESUME_DATA.locationLink}
+                  target="_blank"
+                >
+                  {RESUME_DATA.location}
+                </a>
+            </p>
+            <div className="flex mt-1 gap-x-1 pt-1 text-sm print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
-                  className="h-8 w-8"
+                  className="hidden h-8 w-8"
                   variant="outline"
                   size="icon"
                   asChild
@@ -66,29 +74,15 @@ export default function Page() {
               <PrintButton/>
             </div>
           </div>
-
-          {/* <Avatar className="h-28 w-28">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-          </Avatar> */}
-          <div className="flex flex-col items-end gap-y-0.5 text-gray-700">
-            <p className="max-w-md mt-2 items-center text-pretty font-mono text-sm">
-                <a
-                  className="inline-flex gap-x-2 align-baseline leading-none hover:underline"
-                  href={RESUME_DATA.locationLink}
-                  target="_blank"
-                >
-                  <GlobeIcon className="h-3 w-3" />
-                  {RESUME_DATA.location}
-                </a>
-            </p>
+          <div className="flex flex-col items-end">
+            
             <a 
-                className="max-w-md text-pretty font-mono text-sm hover:underline"
+                className="max-w-md text-pretty text-sm hover:underline"
                 href={RESUME_DATA.personalWebsiteUrl}
             >
               {RESUME_DATA.personalWebsiteUrl?.replace("https://", "").replace("www.", "")}
             </a>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-gray-700 print:flex">
+            <div className="flex-col gap-x-1 text-sm hover:underline">
                 {RESUME_DATA.contact.email ? (
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
                     <span>{RESUME_DATA.contact.email}</span>
@@ -107,7 +101,7 @@ export default function Page() {
         {RESUME_DATA.about && RESUME_DATA.about.trim() !== "" && (
           <>
             <h2 className="text-xl font-bold border-b border-gray-300">About</h2>
-            <p className="text-pretty font-mono text-sm text-gray-700">
+            <p className="text-pretty  text-sm ">
               {RESUME_DATA.about}
             </p>
           </>
@@ -132,7 +126,7 @@ export default function Page() {
                         {work.badges.map((badge: any) => (
                           <Badge
                             variant="secondary"
-                            className="text-xs border-gray-300"
+                            className="text-xs border-gray-700"
                             key={badge}
                           >
                             {badge}
@@ -140,7 +134,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-700">
+                    <div className="text-sm tabular-nums ">
                       {work.start ? (
                         <>
                           {work.start} - {work.end === "" ? "Present" : work.end}
@@ -150,14 +144,14 @@ export default function Page() {
                       )}
                     </div>
                   </div>
-                  <h4 className="font-mono text-sm leading-none">
+                  <h4 className=" text-sm leading-none">
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs text-gray-700">
+                <CardContent className="mt-2 text-xs">
                   {work.description}
                   {work.bullets && work.bullets.length > 0 && (
-                    <ul className="mt-2 space-y-1">
+                    <ul className="mt-0 space-y-0">
                       {work.bullets.map((bullet: string, idx: number) => (
                         <li key={idx}>
                           <span className="mr-2">–</span>
@@ -166,11 +160,11 @@ export default function Page() {
                       ))}
                     </ul>
                   )}
-                  <div className="mt-2 flex flex-wrap gap-1">
+                  <div className="mt-0 flex flex-wrap gap-1">
                     {work.technologies.map((technology: any) => (
                       <Badge 
-                        variant="outline"
-                        className="align-middle text-xs"
+                        variant="secondary"
+                        className="text-[10px] border-gray-300 pt-0 pb-0"
                         key={technology}
                       >
                         {technology}
@@ -192,7 +186,7 @@ export default function Page() {
                     <h3 className="font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-700">
+                    <div className="text-sm tabular-nums ">
                       {education.start && education.end ? (
                         `${education.start} - ${education.end}`
                       ) : (
@@ -201,8 +195,8 @@ export default function Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="text-gray-700">{education.degree}</CardContent>
-                {/* <CardContent className="text-gray-700">In-Major GPA: {education.departmentalGpa}</CardContent> */}
+                <CardContent className="">{education.degree}</CardContent>
+                {/* <CardContent className="">In-Major GPA: {education.departmentalGpa}</CardContent> */}
               </Card>
             );
           })}
