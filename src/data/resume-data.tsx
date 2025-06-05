@@ -9,7 +9,7 @@ export const RESUME_DATA = {
   summary:
     "Full Stack Software Engineer",
   about:
-    "Full Stack Software Engineer with 7+ years of experience building and shipping applications in various languages and frameworks. Passionate about clean code, documentation, and continuous learning.",
+    "Full Stack Software Engineer with experience delivering scalable, high-impact features at Microsoft and across multiple tech stacks. Passionate about clean code and continuous learning.",
   avatarUrl: "",
   personalWebsiteUrl: "https://kaseym.dev",
   contact: {
@@ -118,6 +118,8 @@ export const RESUME_DATA = {
     "Docker",
     "Cybersecurity",
     "CI/CD",
+    "Distributed Systems",
+    "Cloud Computing",
   ],
   projects: [
     {
@@ -148,7 +150,7 @@ export const RESUME_DATA = {
       title: "NFThesis",
       techStack: ["Solidity", "JavaScript", "Ethers.js", "Hardhat", "Alchemy"],
       description:
-        "Deployed a smart contract on the Ropsten testnet allowing students to mint their senior theses as NFTs.",
+        "Built and deployed a smart contract allowing students to mint their senior theses as NFTs.",
       logo: "",
       link: {
         label: "github.com/kasey-mcfadden/NFThesis-Contract",
