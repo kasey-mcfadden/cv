@@ -8,10 +8,11 @@ import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader } from "../components/ui/card";
 import { Section } from "../components/ui/section";
 import { RESUME_DATA } from "../data/resume-data";
+import { WorkCard } from "@/components/work-card";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name.replace(/ /g, "_")}_CV`,
-  description: RESUME_DATA.summary,
+  description: RESUME_DATA.title,
 };
 
 export default function Page() {
@@ -20,20 +21,20 @@ export default function Page() {
       <section className="mx-auto w-full max-w-2xl space-y-4 bg-white">
         <div className="flex items-start justify-between md:flex-row">
           <div className="flex-1">
-            <h1 className="text-xl font-bold">{RESUME_DATA.name}</h1>
+            <h1 className="text-[14pt] font-bold leading-tight">{RESUME_DATA.name}</h1>
             <div className="flex items-center justify-between w-full">
-              <p className="text-pretty text-sm">
-                {RESUME_DATA.summary}
+              <p className="text-pretty text-[11pt] leading-tight">
+                {RESUME_DATA.title}
               </p>
               <a 
-                  className="text-pretty text-sm hover:underline whitespace-nowrap"
+                  className="text-pretty text-[11pt] hover:underline whitespace-nowrap leading-tight"
                   href={RESUME_DATA.personalWebsiteUrl}
               >
                 {RESUME_DATA.personalWebsiteUrl?.replace("https://", "").replace("www.", "")}
               </a>
             </div>
             <div className="flex items-center justify-between w-full">
-              <p className="max-w-md items-center text-pretty text-sm">
+              <p className="max-w-md items-center text-pretty text-[11pt] leading-tight">
                   <a
                     className="inline-flex gap-x-2 align-baseline leading-none hover:underline"
                     href={RESUME_DATA.locationLink}
@@ -43,7 +44,7 @@ export default function Page() {
                   </a>
               </p>
               {RESUME_DATA.contact.email ? (
-                <p className="max-w-md items-center text-pretty text-sm">
+                <p className="max-w-md items-center text-pretty text-[11pt] leading-tight">
                   <a 
                   className="inline-flex gap-x-2 align-baseline leading-none hover:underline"
                   href={`mailto:${RESUME_DATA.contact.email}`}>
@@ -52,7 +53,7 @@ export default function Page() {
                 </p>
               ) : null}
             </div>
-            <div className="flex mt-1 gap-x-1 pt-1 text-sm print:hidden">
+            <div className="flex mt-1 gap-x-1 pt-1 text-[12pt] print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
                   className="hidden h-8 w-8"
@@ -98,93 +99,47 @@ export default function Page() {
         <Section>
         {RESUME_DATA.about && RESUME_DATA.about.trim() !== "" && (
           <>
-            <h2 className="text-xl font-bold border-b border-gray-300">About</h2>
-            <p className="text-pretty text-sm mt-0">
+            <h2 className="text-[12pt] border-b border-gray-400 leading-none">ABOUT</h2>
+            <p className="text-pretty text-[10pt] leading-tight">
               {RESUME_DATA.about}
             </p>
           </>
         )}
         </Section>
+
         <Section>
-          <h2 className="text-xl font-bold border-b border-gray-300">Work Experience</h2>
+          <h2 className="text-[12pt] border-b border-gray-400 leading-none">WORK EXPERIENCE</h2>
           {RESUME_DATA.work.map((work: any) => {
             return (
-              <Card key={work.company}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 text-lg font-semibold leading-none">
-                    {work.link !== "" ? (
-                      <a className="hover:underline" href={work.link}>
-                        {work.company}
-                      </a>
-                    ) : (
-                      <span>{work.company}</span>
-                    )}
-                      <span className="ml-2 inline-flex gap-x-1">
-                        {work.badges.map((badge: any) => (
-                          <Badge
-                            variant="secondary"
-                            className="text-xs border-gray-700"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
-                        ))}
-                      </span>
-                    </h3>
-                    <div className="text-sm italic tabular-nums">
-                      {work.start ? (
-                        <>
-                          {work.start} - {work.end === "" ? "Present" : work.end}
-                        </>
-                      ) : (
-                        <>{work.end}</>
-                      )}
-                    </div>
-                  </div>
-                  <h4 className=" text-sm leading-none">
-                    {work.title}
-                  </h4>
-                </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {work.description}
-                  {work.bullets && work.bullets.length > 0 && (
-                    <ul className="mt-0 space-y-0">
-                      {work.bullets.map((bullet: string, idx: number) => (
-                        <li key={idx}>
-                          <span className="mr-2">–</span>
-                          {bullet}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  <div className="mt-0 flex flex-wrap gap-1">
-                    {work.technologies.map((technology: any) => (
-                      <Badge 
-                        variant="secondary"
-                        className="text-[10px] border-gray-300 pt-0 pb-0"
-                        key={technology}
-                      >
-                        {technology}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <WorkCard
+                key={work.company + work.title}
+                company={work.company}
+                title={work.title}
+                description={work.description}
+                tags={work.technologies}
+                link={work.link}
+                start={work.start}
+                end={work.end}
+                badges={work.badges}
+                bullets={work.bullets}
+                logo = {work.logo}
+                technologies={work.technologies}
+              />
             );
           })}
         </Section>
+
         <Section>
-          <h2 className="text-xl font-bold border-b border-gray-300">Education</h2>
+          <h2 className="text-[12pt] border-b border-gray-400 leading-none">EDUCATION</h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
+                  <div className="flex items-center justify-between gap-x-2">
                     <h3 className="font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-sm tabular-nums ">
+                    <div className="text-[10pt] tabular-nums ">
                       {education.start && education.end ? (
                         `${education.start} - ${education.end}`
                       ) : (
@@ -194,18 +149,19 @@ export default function Page() {
                   </div>
                 </CardHeader>
                 <CardContent className="">{education.degree}</CardContent>
-                {/* <CardContent className="">In-Major GPA: {education.departmentalGpa}</CardContent> */}
+                <CardContent className="hidden">In-Major GPA: {education.departmentalGpa}</CardContent>
               </Card>
             );
           })}
         </Section>
+
         <Section>
-          <h2 className="text-xl font-bold border-b border-gray-300">Skills</h2>
+          <h2 className="text-[12pt] border-b border-gray-400 leading-none">SKILLS</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
               return <Badge 
                 variant="default"
-                className="text-xs border-gray-300" 
+                className="text-[10pt] border-gray-400" 
                 key={skill}
               >
                 {skill}
@@ -213,8 +169,9 @@ export default function Page() {
             })}
           </div>
         </Section>
+
         <Section className="scroll-mb-16">
-          <h2 className="text-xl font-bold border-b border-gray-300">Projects</h2>
+          <h2 className="text-[12pt] border-b border-gray-400 leading-none">PROJECTS</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
               return (

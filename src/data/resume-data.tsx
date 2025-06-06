@@ -6,7 +6,7 @@ export const RESUME_DATA = {
   initials: "KM",
   location: "New York, NY",
   locationLink: "https://www.google.com/maps/place/NY",
-  summary:
+  title:
     "Full Stack Software Engineer",
   about:
     "Full Stack Software Engineer with experience delivering scalable, high-impact features at Microsoft and across multiple tech stacks. Passionate about clean code and continuous learning.",

@@ -18,13 +18,12 @@ export function ProjectCard({ title, description, tags, link }: Props) {
   return (
     <Card className="flex flex-col overflow-hidden border border-muted p-3">
       <CardHeader className="">
-        <div className="space-y-1">
           <CardTitle className="text-base">
             {link ? (
               <a
                 href={link}
                 target="_blank"
-                className="inline-flex items-center gap-1 hover:underline"
+                className="inline-flex items-center hover:underline"
               >
                 {title}{" "}
                 <span className="h-1 w-1 rounded-full bg-green-500"></span>
@@ -39,10 +38,9 @@ export function ProjectCard({ title, description, tags, link }: Props) {
           <CardDescription className="text-xs">
             {description}
           </CardDescription>
-        </div>
       </CardHeader>
       <CardContent className="mt-auto flex">
-        <div className="mt-2 flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-1">
           {tags.map((tag) => (
             <Badge
               className="px-1 py-0 text-[10px]"
