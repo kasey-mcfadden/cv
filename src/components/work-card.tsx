@@ -24,7 +24,7 @@ export function WorkCard({ company, title, description, tags, link, start, end, 
         <Card>
             <CardHeader>
                 <div className="flex items-center justify-between gap-x-2">
-                <h3 className="inline-flex items-center justify-center gap-x-1 mb-0 text-[12pt] font-semibold leading-tight">
+                <h3 className="inline-flex items-center justify-center text-[12pt] font-semibold leading-none">
                 {link !== "" ? (
                     <a className="hover:underline" href={link}>
                     {company}
@@ -32,7 +32,7 @@ export function WorkCard({ company, title, description, tags, link, start, end, 
                 ) : (
                     <span>{company}</span>
                 )}
-                    <span className="ml-2 inline-flex gap-x-1 leading-none">
+                    <span className="ml-2 inline-flex leading-none">
                     {badges.map((badge: any) => (
                         <Badge
                         variant="secondary"
@@ -58,19 +58,22 @@ export function WorkCard({ company, title, description, tags, link, start, end, 
                 {title}
                 </h4>
             </CardHeader>
-            <CardContent className="mt-1">
+            <CardContent className="mt-0.5 leading-tight">
                 {description}
                 {bullets && bullets.length > 0 && (
-                <ul className="mt-0 space-y-0">
+                <ul className="mt-0.5 space-y-0.2">
                     {bullets.map((bullet: string, idx: number) => (
-                    <li key={idx}>
+                    <li 
+                        className="leading-tight" 
+                        key={idx}
+                    >
                         <span className="mr-2">–</span>
                         {bullet}
                     </li>
                     ))}
                 </ul>
                 )}
-                <div className="mt-0 flex flex-wrap gap-1">
+                <div className="hidden mt-0 flex flex-wrap gap-1">
                 {technologies.map((technology: any) => (
                     <Badge 
                     variant="secondary"

@@ -26,7 +26,7 @@ export function ProjectCard({ title, description, tags, link }: Props) {
                 className="inline-flex items-center hover:underline"
               >
                 {title}{" "}
-                <span className="h-1 w-1 rounded-full bg-green-500"></span>
+                <span className="ml-2 h-1 w-1 rounded-full bg-green-500"></span>
               </a>
             ) : (
               title
