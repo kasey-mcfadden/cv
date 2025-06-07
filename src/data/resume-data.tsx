@@ -9,7 +9,7 @@ export const RESUME_DATA = {
   title:
     "Full Stack Software Engineer",
   about:
-    "Full Stack Software Engineer with experience delivering scalable, high-impact features at Microsoft and across multiple tech stacks. Passionate about clean code and continuous learning.",
+    "Full Stack Software Engineer with experience delivering scalable, high-impact features at Microsoft and across multiple tech stacks. Passionate about performance, clean code, and continuous learning.",
   avatarUrl: "",
   personalWebsiteUrl: "https://kaseym.dev",
   contact: {
