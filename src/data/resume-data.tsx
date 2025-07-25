@@ -11,7 +11,7 @@ export const RESUME_DATA = {
   about:
     "Full Stack Software Engineer with experience delivering scalable, high-impact features at Microsoft and across multiple tech stacks. Passionate about performance, clean code, and continuous learning.",
   avatarUrl: "",
-  personalWebsiteUrl: "https://kaseym.dev",
+  personalWebsiteUrl: "https://kaseym.com",
   contact: {
     email: "kaseysmcfadden@gmail.com",
     tel: "",
@@ -53,14 +53,13 @@ export const RESUME_DATA = {
       end: "",
       description: "Developed a distributed CMS, powering content workflow for end-user Help, Support, and Learning Experiences across Microsoft's product suite (3b+ annual impressions, 500m+ monthly requests).",
       bullets: [
+        "Maintained and expanded suite of 20+ scalable microservices.",
         "Reduced sitewide permissions retrieval time by 76\% by refining C# concurrency techniques.",
-        "Led .NET learning and upgrade initiative, modernizing 20+ scalable microservices.",
         "Streamlined content onboarding for Copilot Labs, accelerating adoption of Microsoft's generative AI.",
-        "Developed a k6 performance testing suite, identifying an 80\% improvement in federated gateway durations.",
-        "Delivered full stack Product-Level Permissions feature ahead of deadline, architecting new site performance graphs by logging and metering through Geneva (Microsoft's monitoring platform) to target improvements for users.",
+        "Developed a Grafana k6 performance testing suite, identifying an 80\% improvement in federated gateway durations.",
+        "Delivered full stack permissions features, architecting new site performance graphs by logging and metering through Geneva (Microsoft's monitoring platform) to target improvements for users.",
         "Led 5+ high-priority privacy and security efforts towards safe service connection and secrets standards.",
         "Created LLM-powered Agile templates, accelerating team delivery.",
-        "Authored and presented an architecture doc on a new system design for Authoring Schemas after identifying inefficiencies and failures in existing processes.",
         "Onboarded and mentored 2 early-career engineers.",
       ],
       technologies: ["C#", "TypeScript", "React", "Redux", "GraphQL", "Azure DevOps", "Copilot", "OpenAI"],
