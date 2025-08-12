@@ -51,7 +51,7 @@ export const RESUME_DATA = {
       logo: "",
       start: "Aug. 2022",
       end: "",
-      description: "Developed a distributed CMS, powering content workflow for end-user Help, Support, and Learning Experiences across Microsoft's product suite (3b+ annual impressions, 500m+ monthly requests).",
+      description: "Developed a distributed CMS, powering content workflow across Microsoft's product suite (3b+ annual impressions, 500m+ monthly requests).",
       bullets: [
         "Maintained and expanded suite of 20+ scalable microservices.",
         "Reduced sitewide permissions retrieval time by 76\% by refining C# concurrency techniques.",
