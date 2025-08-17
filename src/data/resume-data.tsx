@@ -13,7 +13,7 @@ export const RESUME_DATA = {
   avatarUrl: "",
   personalWebsiteUrl: "https://kaseym.com",
   contact: {
-    email: "kaseysmcfadden@gmail.com",
+    email: "kaseym@alumni.princeton.edu",
     tel: "",
     social: [
       {
@@ -51,7 +51,7 @@ export const RESUME_DATA = {
       logo: "",
       start: "Aug. 2022",
       end: "",
-      description: "Developed a distributed CMS, powering content workflow across Microsoft's product suite (3b+ annual impressions, 500m+ monthly requests).",
+      description: "Developed a distributed Content Management System (CMS), powering content workflow across Microsoft's product suite (3b+ annual impressions, 500m+ monthly requests). Hundreds of content authors, billions of readers.",
       bullets: [
         "Maintained and expanded suite of 20+ scalable microservices.",
         "Reduced sitewide permissions retrieval time by 76\% by refining C# concurrency techniques.",
