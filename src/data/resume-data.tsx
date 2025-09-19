@@ -44,13 +44,27 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "Stealth Startup",
+      link: "",
+      badges: [],
+      title: "Founding Engineer",
+      logo: "",
+      start: "Aug. 2025",
+      end: "",
+      description: "Building something exciting in the legal AI space.",
+      bullets: [
+        // "",
+      ],
+      technologies: ["C#", "TypeScript", "React", "Redux", "GraphQL", "Azure DevOps", "Copilot", "OpenAI"],
+    },
+    {
       company: "Microsoft",
       link: "",
       badges: [],
       title: "Software Engineer",
       logo: "",
       start: "Aug. 2022",
-      end: "",
+      end: "Jul. 2025",
       description: "Drove development of Microsoft's distributed CMS, enabling hundreds of authors to publish content at scale (500M+ monthly requests, 3B+ annual impressions) and supporting adoption across flagship products.",
       bullets: [
         "Maintained and expanded a suite of 20+ scalable microservices.",
