@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { cleanUrl } from "@/lib/utils";
 
 interface Props {
   title: string;
@@ -33,7 +34,7 @@ export function ProjectCard({ title, description, tags, link }: Props) {
             )}
           </CardTitle>
           <div className="hidden text-xs underline print:visible">
-            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
+            {link ? cleanUrl(link) : null}
           </div>
           <CardDescription className="text-xs">
             {description}

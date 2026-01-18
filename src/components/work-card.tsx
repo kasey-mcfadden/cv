@@ -9,17 +9,14 @@ interface Props {
   company: string;
   title: string;
   description: string;
-  tags: readonly string[];
   link: string;
   start: string;
   end: string;
   badges: readonly string[];
-  bullets: readonly string[];
-  logo: string;
-  technologies: readonly string[];
+  bullets?: readonly string[];
 }
 
-export function WorkCard({ company, title, description, tags, link, start, end, badges, bullets, logo, technologies}: Props) {
+export function WorkCard({ company, title, description, link, start, end, badges, bullets }: Props) {
     return (
         <Card>
             <CardHeader>
@@ -33,7 +30,7 @@ export function WorkCard({ company, title, description, tags, link, start, end, 
                     <span>{company}</span>
                 )}
                     <span className="ml-2 inline-flex leading-none">
-                    {badges.map((badge: any) => (
+                    {badges.map((badge) => (
                         <Badge
                         variant="secondary"
                         className="text-[10pt] border-gray-400"
@@ -54,7 +51,7 @@ export function WorkCard({ company, title, description, tags, link, start, end, 
                     )}
                 </div>
                 </div>
-                <h4 className="mt-0 mb-0 text-[11pt] mt-0 leading-none">
+                <h4 className="mt-0 mb-0 text-[11pt] leading-none">
                 {title}
                 </h4>
             </CardHeader>
@@ -73,17 +70,6 @@ export function WorkCard({ company, title, description, tags, link, start, end, 
                     ))}
                 </ul>
                 )}
-                <div className="hidden mt-0 flex flex-wrap gap-1">
-                {technologies.map((technology: any) => (
-                    <Badge 
-                    variant="secondary"
-                    className="text-[10px] border-gray-400 pt-0 pb-0"
-                    key={technology}
-                    >
-                    {technology}
-                    </Badge>
-                ))}
-                </div>
             </CardContent>
         </Card>
     );

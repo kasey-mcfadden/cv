@@ -1,20 +1,12 @@
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "./ui/card";
-import { Badge } from "./ui/badge";
+import { cleanUrl } from "@/lib/utils";
 
 interface Props {
   title: string;
   description: string;
-  tags: readonly string[];
   link?: string;
 }
 
-export function MinimalProjectCard({ title, description, tags, link }: Props) {
+export function MinimalProjectCard({ title, description, link }: Props) {
   return (
     <p className="text-[10pt] leading-tight">
       <span className="font-semibold">
@@ -35,7 +27,7 @@ export function MinimalProjectCard({ title, description, tags, link }: Props) {
       {link && (
       <span className="hidden underline print:visible">
         <br></br>
-        {link.replace("https://", "").replace("www.", "")}
+        {cleanUrl(link)}
       </span>
       )}
     </p>

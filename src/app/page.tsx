@@ -1,13 +1,13 @@
 import { PrintButton } from "@/components/print-button";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { MailIcon, PhoneIcon } from "lucide-react";
 import { Metadata } from "next";
 import { CommandMenu } from "../components/command-menu";
 import { ProjectCard } from "../components/project-card";
-import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader } from "../components/ui/card";
 import { Section } from "../components/ui/section";
-import { RESUME_DATA } from "../data/resume-data";
+import { RESUME_DATA, WorkEntry } from "../data/resume-data";
+import { cleanUrl } from "@/lib/utils";
 import { WorkCard } from "@/components/work-card";
 import { MinimalProjectCard } from "@/components/minimal-project-card";
 
@@ -37,7 +37,7 @@ export default function Page() {
                   className="hover:underline whitespace-nowrap"
                   href={RESUME_DATA.personalWebsiteUrl}
               >
-                {RESUME_DATA.personalWebsiteUrl?.replace("https://", "").replace("www.", "")}
+                {RESUME_DATA.personalWebsiteUrl ? cleanUrl(RESUME_DATA.personalWebsiteUrl) : null}
               </a>
             </div>
 
@@ -65,7 +65,7 @@ export default function Page() {
                   href={linkedIn.url}
                   target="_blank"
                 >
-                  {linkedIn.url.replace("https://", "").replace("www.", "")}
+                  {cleanUrl(linkedIn.url)}
                 </a>
               )}
             </div>
@@ -127,21 +127,18 @@ export default function Page() {
 
         <Section>
           <h2 className="text-[12pt] border-b border-gray-400 leading-none">WORK EXPERIENCE</h2>
-          {RESUME_DATA.work.map((work: any) => {
+          {RESUME_DATA.work.map((work: WorkEntry) => {
             return (
               <WorkCard
                 key={work.company + work.title}
                 company={work.company}
                 title={work.title}
                 description={work.description}
-                tags={work.technologies}
                 link={work.link}
                 start={work.start}
                 end={work.end}
                 badges={work.badges}
-                bullets={work.bullets}
-                logo = {work.logo}
-                technologies={work.technologies}
+                bullets={"bullets" in work ? work.bullets : undefined}
               />
             );
           })}
@@ -207,7 +204,6 @@ export default function Page() {
                   key={project.title}
                   title={project.title}
                   description={project.description}
-                  tags={project.techStack}
                   link={"link" in project ? project.link.href : undefined}
                 />
               );
@@ -222,9 +218,9 @@ export default function Page() {
             url: RESUME_DATA.personalWebsiteUrl,
             title: "Personal Website",
           },
-          ...RESUME_DATA.contact.social.map((socilaMediaLink) => ({
-            url: socilaMediaLink.url,
-            title: socilaMediaLink.name,
+          ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
+            url: socialMediaLink.url,
+            title: socialMediaLink.name,
           })),
         ]}
       />

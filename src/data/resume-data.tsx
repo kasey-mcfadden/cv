@@ -182,3 +182,8 @@ export const RESUME_DATA = {
     },
   ],
 } as const;
+
+export type ResumeData = typeof RESUME_DATA;
+export type WorkEntry = ResumeData["work"][number];
+export type Education = ResumeData["education"][number];
+export type Project = ResumeData["projects"][number];
