@@ -1,5 +1,6 @@
 import { GitHubIcon } from "../components/icons/GitHubIcon";
 import { LinkedInIcon } from "../components/icons/LinkedInIcon";
+import { logos } from "./logos";
 
 export const RESUME_DATA = {
   name: "Kasey McFadden",
@@ -32,7 +33,7 @@ export const RESUME_DATA = {
       departmentalGpa: "3.63",
       start: "",
       end: "May 2022",
-      logo: "/logos/princeton.png",
+      logo: logos.princeton,
     },
   ],
   work: [
@@ -41,7 +42,7 @@ export const RESUME_DATA = {
       link: "",
       badges: [],
       title: "Founding Engineer",
-      logo: "/logos/sandstone.png",
+      logo: logos.sandstone,
       start: "Aug. 2025",
       end: "",
       description: "Building the intelligence layer for in-house legal teams. Full-stack ownership across product, integrations, and developer tooling. Backed by Sequoia.",
@@ -53,7 +54,7 @@ export const RESUME_DATA = {
       link: "",
       badges: [],
       title: "Software Engineer",
-      logo: "/logos/microsoft.png",
+      logo: logos.microsoft,
       start: "Aug. 2022",
       end: "Jul. 2025",
       description: "Drove development of Microsoft's distributed CMS, enabling hundreds of authors to publish content at scale (500M+ monthly requests, 3B+ annual impressions) and supporting adoption across flagship products.",
@@ -74,7 +75,7 @@ export const RESUME_DATA = {
       link: "",
       badges: [],
       title: "Software Engineer Intern",
-      logo: "/logos/capital-one.png",
+      logo: logos.capitalOne,
       start: "",
       end: "Summer 2021",
       description: "Developed a React web application with Express.js to replace static sites for 30k+ users, integrating Tableau and QuickSight for streamlined business analytics, reducing manual reporting time by 40%. \
@@ -86,7 +87,7 @@ export const RESUME_DATA = {
       link: "",
       badges: [],
       title: "Software Engineer Intern",
-      logo: "/logos/merck.png",
+      logo: logos.merck,
       start: "",
       end: "Summer 2020",
       description: "Developed a Python-based computer vision system using FRCNN and OpenCV to automate pill disintegration analysis, reducing manual analysis time by 60%. \

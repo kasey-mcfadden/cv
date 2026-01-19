@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Badge } from "./ui/badge";
 import {
     Card,
@@ -15,7 +15,7 @@ interface Props {
     end: string;
     badges: readonly string[];
     bullets?: readonly string[];
-    logo?: string;
+    logo?: StaticImageData;
 }
 
 export function WorkCard({ company, title, description, link, start, end, badges, bullets, logo }: Props) {
