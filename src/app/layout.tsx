@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kaseym.com"),
   title: "Kasey McFadden",
   description: "Full Stack Software Engineer",
 };
