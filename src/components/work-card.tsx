@@ -30,6 +30,7 @@ export function WorkCard({ company, title, description, link, start, end, badges
                             width={28}
                             height={28}
                             className="object-contain print:hidden"
+                            style={{ width: 'auto', height: 'auto', maxWidth: 28, maxHeight: 28 }}
                         />
                     )}
                     <div className="flex-1">

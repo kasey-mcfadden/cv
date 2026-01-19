@@ -134,6 +134,7 @@ export default function Page() {
                         width={32}
                         height={32}
                         className="object-contain print:hidden"
+                        style={{ width: 'auto', height: 'auto', maxWidth: 32, maxHeight: 32 }}
                       />
                     )}
                     <div className="flex-1">

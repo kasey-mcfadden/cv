@@ -1,7 +1,34 @@
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 
 import "./globals.css";
+
+const cmuSerif = localFont({
+  src: [
+    {
+      path: "../../public/fonts/cmu-serif/cmunrm.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/cmu-serif/cmunbx.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/cmu-serif/cmunti.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/cmu-serif/cmunbi.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-cmu-serif",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kaseym.com"),
@@ -9,6 +36,9 @@ export const metadata: Metadata = {
   description: "Full Stack Software Engineer",
   alternates: {
     canonical: "/cv",
+  },
+  icons: {
+    icon: "/cv/favicon.png",
   },
 };
 
@@ -28,27 +58,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="preload"
-          href="/cv/fonts/cmu-serif/cmunrm.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/cv/fonts/cmu-serif/cmunbx.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
-      <Analytics />
+      <body className={cmuSerif.className}>{children}</body>
     </html>
   );
 }

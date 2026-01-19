@@ -2,31 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'CMU Serif';
-  src: url('../../public/fonts/cmu-serif/cmunrm.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'CMU Serif';
-  src: url('../../public/fonts/cmu-serif/cmunbx.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'CMU Serif';
-  src: url('../../public/fonts/cmu-serif/cmunti.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'CMU Serif';
-  src: url('../../public/fonts/cmu-serif/cmunbi.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -104,9 +79,6 @@
   page-break-before: always;
 }
 
-body {
-  font-family: "CMU Serif", serif;
-}
 
 /* Hide browser print header/footer */
 @media print {
