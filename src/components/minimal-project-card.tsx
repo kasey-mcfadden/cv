@@ -10,25 +10,25 @@ export function MinimalProjectCard({ title, description, link }: Props) {
   return (
     <p className="text-[10pt] leading-tight">
       <span className="font-semibold">
-      {link ? (
-        <a
-          href={link}
-          target="_blank"
-          className="hover:underline"
-        >
-          {title}
-        </a>
-      ) : (
-        title
-      )}
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            className="hover:underline"
+          >
+            {title}
+          </a>
+        ) : (
+          title
+        )}
       </span>
       {": "}
       {description}
       {link && (
-      <span className="hidden underline print:visible">
-        <br></br>
-        {cleanUrl(link)}
-      </span>
+        <span className="hidden underline print:visible">
+          <br />
+          {cleanUrl(link)}
+        </span>
       )}
     </p>
   );

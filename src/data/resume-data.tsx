@@ -3,18 +3,15 @@ import { LinkedInIcon } from "../components/icons/LinkedInIcon";
 
 export const RESUME_DATA = {
   name: "Kasey McFadden",
-  initials: "KM",
   location: "New York, NY",
   locationLink: "https://www.google.com/maps/place/NY",
-  title:
-    "Full Stack Software Engineer",
-  about:
-    "Full Stack Software Engineer with experience delivering scalable, high-impact features at Microsoft and across multiple tech stacks. Passionate about performance, clean code, and continuous learning.",
-  avatarUrl: "",
+  title: "Full Stack Software Engineer",
+  about: `Founding engineer at a Sequoia-backed legal tech startup, building 
+    full-stack AI infrastructure from the ground up. Previously spent 3 years 
+    at Microsoft developing distributed content systems at scale. Focused on shipping high-quality software, fast.`,
   personalWebsiteUrl: "https://kaseym.com",
   contact: {
     email: "kaseym@alumni.princeton.edu",
-    tel: "",
     social: [
       {
         name: "GitHub",
@@ -26,11 +23,6 @@ export const RESUME_DATA = {
         url: "https://www.linkedin.com/in/kaseymcfadden/",
         icon: LinkedInIcon,
       },
-      // {
-      //   name: "X",
-      //   url: "https://x.com/",
-      //   icon: XIcon,
-      // },
     ],
   },
   education: [
@@ -40,29 +32,28 @@ export const RESUME_DATA = {
       departmentalGpa: "3.63",
       start: "",
       end: "May 2022",
+      logo: "/logos/princeton.png",
     },
   ],
   work: [
     {
-      company: "Stealth Startup",
+      company: "Sandstone",
       link: "",
       badges: [],
       title: "Founding Engineer",
-      logo: "",
+      logo: "/logos/sandstone.png",
       start: "Aug. 2025",
       end: "",
-      description: "Building something exciting in the legal AI space.",
-      bullets: [
-        // "",
-      ],
-      technologies: ["C#", "TypeScript", "React", "Redux", "GraphQL", "Azure DevOps", "Copilot", "OpenAI"],
+      description: "Building the intelligence layer for in-house legal teams. Full-stack ownership across product, integrations, and developer tooling. Backed by Sequoia.",
+      bullets: [],
+      technologies: ["Python", "Rust", "TypeScript", "React"],
     },
     {
       company: "Microsoft",
       link: "",
       badges: [],
       title: "Software Engineer",
-      logo: "",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_icon.svg/250px-Microsoft_icon.svg.png",
       start: "Aug. 2022",
       end: "Jul. 2025",
       description: "Drove development of Microsoft's distributed CMS, enabling hundreds of authors to publish content at scale (500M+ monthly requests, 3B+ annual impressions) and supporting adoption across flagship products.",
@@ -83,7 +74,7 @@ export const RESUME_DATA = {
       link: "",
       badges: [],
       title: "Software Engineer Intern",
-      logo: "",
+      logo: "https://companieslogo.com/img/orig/COF-669e640e.png?t=1720244491",
       start: "",
       end: "Summer 2021",
       description: "Developed a React web application with Express.js to replace static sites for 30k+ users, integrating Tableau and QuickSight for streamlined business analytics, reducing manual reporting time by 40%. \
@@ -95,35 +86,23 @@ export const RESUME_DATA = {
       link: "",
       badges: [],
       title: "Software Engineer Intern",
-      logo: "",
+      logo: "https://companieslogo.com/img/orig/MRK-7f8ec2c5.png?t=1722952496",
       start: "",
       end: "Summer 2020",
       description: "Developed a Python-based computer vision system using FRCNN and OpenCV to automate pill disintegration analysis, reducing manual analysis time by 60%. \
         Designed interactive D3.js visualization maps, leveraging Merck's Blockchain API and Go backend to monitor pharmaceutical product distribution and combat fraud.",
       technologies: ["Python", "Go", "JavaScript", "D3.js", "OpenCV", "NumPy"],
     },
-    {
-      company: "Venus Technology Ventures",
-      link: "",
-      badges: ["Acquired 2021"],
-      title: "Software Engineer Intern",
-      logo: "",
-      start: "",
-      end: "Summer 2019",
-      description: "Integrated Stanford CoreNLP pipeline into a Go-based fintech voice platform, enabling natural language pattern recognition and custom user vocabulary, contributing to a patent application. \
-        Led a refactoring effort, integrating 10+ APIs, migrating the UI to Sencha, and adding authentication and voice AI capabilities.",
-      technologies: ["Go", "JavaScript", "Sencha", "NLP"],
-    },
   ],
   skills: {
-    languages: [
-      "TypeScript/JavaScript", "C#", "Python", "Go", "Java", "SQL", "GraphQL"
+    technologies: [
+      "OpenAI", "Anthropic", "RAG", "Kubernetes", "Docker", "AWS", "GCP", "Azure", "PostgreSQL", "PostHog", "CI/CD"
     ],
     frameworks: [
-      "React", "Redux", ".NET", "Apollo", "Next.js", "Node.js", "Express.js", "Jest"
+      "React", "Next.js", "LangChain", "Vercel AI SDK", "Temporal", "Node.js", "FastAPI", "Tailwind", "Playwright"
     ],
-    technologies: [
-      "OpenAI", "Copilot", "Azure", "AWS", "Kubernetes", "Docker", "D2", "CI/CD", "Distributed Systems"
+    languages: [
+      "TypeScript/JavaScript", "Python", "C#", "Go", "SQL", "GraphQL", "Java"
     ]
   },
   projects: [
@@ -134,7 +113,6 @@ export const RESUME_DATA = {
         "JavaScript",
       ],
       description: "Group finder built for Princeton's McGraw Center. Still in active use by students.",
-      logo: "",
       link: {
         label: "tigerapps.org",
         href: "https://tigerapps.org/",
@@ -142,13 +120,22 @@ export const RESUME_DATA = {
     },
     {
       title: "MerckMap",
-      techStack: ["Hackathon", "Lead Developer", "Python", "Go", "JavaScript", "D3.js"],
+      techStack: ["Python", "Go", "JavaScript", "D3.js"],
       description:
         "Map-based data model using Merck's Blockchain API. Won 1st Place, Merck Challenge @ HackRU.",
-      logo: "",
       link: {
         label: "kasey-mcfadden.github.io/hack_ru",
         href: "https://kasey-mcfadden.github.io/hack_ru/",
+      },
+    },
+    {
+      title: "Mountain View",
+      techStack: ["Three.js", "WebGL", "JavaScript"],
+      description:
+        "Interactive 3D landscape with dynamic lighting, weather systems, and procedural terrain.",
+      link: {
+        label: "mountain-view.kaseym.com",
+        href: "https://mountain-view.kaseym.com/",
       },
     },
     {
@@ -156,7 +143,6 @@ export const RESUME_DATA = {
       techStack: ["Solidity", "JavaScript", "Ethers.js", "Hardhat", "Alchemy"],
       description:
         "Built and deployed a smart contract allowing students to mint their senior theses as NFTs.",
-      logo: "",
       link: {
         label: "github.com/kasey-mcfadden/NFThesis-Contract",
         href: "https://github.com/kasey-mcfadden/NFThesis-Contract"
@@ -167,7 +153,6 @@ export const RESUME_DATA = {
       techStack: ["Go"],
       description:
         "A cache optimized to favor either recency or frequency, improving hit ratio.",
-      logo: "",
       link: {
         label: "github.com/kasey-mcfadden/arc",
         href: "https://github.com/kasey-mcfadden/arc",
@@ -178,7 +163,6 @@ export const RESUME_DATA = {
       techStack: ["Python", "JavaScript"],
       description:
         "Twitter-like platform incorporating tailored foreign language quizzes within your feed.",
-      logo: "",
     },
   ],
 } as const;
