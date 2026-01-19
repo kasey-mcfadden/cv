@@ -111,7 +111,7 @@ body {
 /* Hide browser print header/footer */
 @media print {
   @page {
-    margin: 0.7in;
+    margin: 0.5in;
   }
   .container, main, body {
     padding: 0 !important;

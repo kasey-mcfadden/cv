@@ -21,8 +21,8 @@ const linkedIn = RESUME_DATA.contact.social.find(
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto md:p-12">
-      <section className="mx-auto w-full max-w-3xl space-y-3 bg-white">
+    <main className="container relative mx-auto overflow-auto p-4 md:p-12">
+      <section className="mx-auto w-full max-w-3xl space-y-3 print:space-y-2 bg-white">
         <div className="flex items-start justify-between md:flex-row">
           <div className="flex-1">
 
@@ -168,7 +168,7 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section className="scroll-mb-16 print:hidden">
+        <Section>
           <h2 className="text-[12pt] border-b border-gray-400 leading-none">PROJECTS</h2>
           <div className="print:hidden -mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
@@ -183,7 +183,7 @@ export default function Page() {
               );
             })}
           </div>
-          <div className="invisible print:visible mb-0.5">
+          <div className="hidden print:block mb-0.5">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <MinimalProjectCard

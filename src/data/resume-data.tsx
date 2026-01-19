@@ -53,7 +53,7 @@ export const RESUME_DATA = {
       link: "",
       badges: [],
       title: "Software Engineer",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_icon.svg/250px-Microsoft_icon.svg.png",
+      logo: "/logos/microsoft.png",
       start: "Aug. 2022",
       end: "Jul. 2025",
       description: "Drove development of Microsoft's distributed CMS, enabling hundreds of authors to publish content at scale (500M+ monthly requests, 3B+ annual impressions) and supporting adoption across flagship products.",
@@ -74,7 +74,7 @@ export const RESUME_DATA = {
       link: "",
       badges: [],
       title: "Software Engineer Intern",
-      logo: "https://companieslogo.com/img/orig/COF-669e640e.png?t=1720244491",
+      logo: "/logos/capital-one.png",
       start: "",
       end: "Summer 2021",
       description: "Developed a React web application with Express.js to replace static sites for 30k+ users, integrating Tableau and QuickSight for streamlined business analytics, reducing manual reporting time by 40%. \
@@ -86,7 +86,7 @@ export const RESUME_DATA = {
       link: "",
       badges: [],
       title: "Software Engineer Intern",
-      logo: "https://companieslogo.com/img/orig/MRK-7f8ec2c5.png?t=1722952496",
+      logo: "/logos/merck.png",
       start: "",
       end: "Summer 2020",
       description: "Developed a Python-based computer vision system using FRCNN and OpenCV to automate pill disintegration analysis, reducing manual analysis time by 60%. \
