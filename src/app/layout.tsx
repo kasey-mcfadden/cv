@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kaseym.com"),
   title: "Kasey McFadden",
   description: "Full Stack Software Engineer",
+  alternates: {
+    canonical: "/cv",
+  },
 };
 
 const jsonLd = {
