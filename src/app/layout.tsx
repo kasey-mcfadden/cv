@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   description: "Full Stack Software Engineer",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  name: "Kasey McFadden - Resume",
+  description: "Full Stack Software Engineer",
+  url: "https://kaseym.com/cv",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -30,6 +38,10 @@ export default function RootLayout({
           as="font"
           type="font/ttf"
           crossOrigin="anonymous"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body>{children}</body>
