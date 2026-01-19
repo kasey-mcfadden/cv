@@ -3,6 +3,7 @@ import { PrintButton } from "@/components/print-button";
 import { WorkCard } from "@/components/work-card";
 import { cleanUrl } from "@/lib/utils";
 import { Metadata } from "next";
+import Image from "next/image";
 import { CommandMenu } from "../components/command-menu";
 import { ProjectCard } from "../components/project-card";
 import { Button } from "../components/ui/button";
@@ -127,10 +128,12 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center gap-x-3">
                     {"logo" in education && education.logo && (
-                      <img
+                      <Image
                         src={education.logo}
                         alt={`${education.school} logo`}
-                        className="h-8 w-8 object-contain print:hidden"
+                        width={32}
+                        height={32}
+                        className="object-contain print:hidden"
                       />
                     )}
                     <div className="flex-1">

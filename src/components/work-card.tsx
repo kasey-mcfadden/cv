@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Badge } from "./ui/badge";
 import {
     Card,
@@ -23,10 +24,12 @@ export function WorkCard({ company, title, description, link, start, end, badges
             <CardHeader>
                 <div className="flex items-center gap-x-3">
                     {logo && (
-                        <img
+                        <Image
                             src={logo}
                             alt={`${company} logo`}
-                            className="h-7 w-7 object-contain print:hidden"
+                            width={28}
+                            height={28}
+                            className="object-contain print:hidden"
                         />
                     )}
                     <div className="flex-1">

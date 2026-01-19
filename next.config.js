@@ -2,6 +2,9 @@
 const nextConfig = {
   output: 'export',
   basePath: process.env.NODE_ENV === 'production' ? '/cv' : '',
+  images: {
+    unoptimized: true,
+  },
 }
 
 module.exports = nextConfig
