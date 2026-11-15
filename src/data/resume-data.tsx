@@ -6,10 +6,10 @@ export const RESUME_DATA = {
   name: "Kasey McFadden",
   location: "New York, NY",
   locationLink: "https://www.google.com/maps/place/NY",
-  title: "Full Stack Software Engineer",
-  about: `Founding engineer at a Sequoia-backed legal tech startup, building 
-    full-stack AI infrastructure from the ground up. Previously spent 3 years 
-    at Microsoft developing distributed content systems at scale. Focused on shipping high-quality software, fast.`,
+  title: "Product Lead & Full Stack Engineer",
+  about: `Founding engineer (employee #2) at Sandstone, a legal tech startup backed by Sequoia and Lightspeed. I came in as an engineer 
+    and my role has grown into product, so I now split my time between customers, product decisions, 
+    and shipping code. Previously at Microsoft.`,
   personalWebsiteUrl: "https://kaseym.com",
   contact: {
     email: "kaseym@alumni.princeton.edu",
@@ -41,11 +41,11 @@ export const RESUME_DATA = {
       company: "Sandstone",
       link: "",
       badges: [],
-      title: "Founding Engineer",
+      title: "Product Lead & Founding Engineer",
       logo: logos.sandstone,
       start: "Aug. 2025",
       end: "",
-      description: "Building the intelligence layer for in-house legal teams. Full-stack ownership across product, integrations, and developer tooling. Backed by Sequoia.",
+      description: "Building the intelligence layer for in-house legal teams. Own product and engineering work end to end, from customer discovery through shipping.",
       bullets: [],
       technologies: ["Python", "Rust", "TypeScript", "React"],
     },
@@ -108,15 +108,35 @@ export const RESUME_DATA = {
   },
   projects: [
     {
+      title: "Mountain View",
+      techStack: ["Three.js", "WebGL", "JavaScript"],
+      description:
+        "Interactive 3D landscape with dynamic lighting, weather systems, and procedural terrain.",
+      link: {
+        label: "mountain-view.kaseym.com",
+        href: "https://mountain-view.kaseym.com/",
+      },
+    },
+    {
+      title: "Diagrams",
+      techStack: ["TypeScript", "Next.js", "libSQL"],
+      description:
+        "Self-hosted Excalidraw workspace with folders, autosave, and version history.",
+      link: {
+        label: "diagrams.kaseym.com",
+        href: "https://diagrams.kaseym.com/",
+      },
+    },
+    {
       title: "TigerStudy",
       techStack: [
         "Python",
         "JavaScript",
       ],
-      description: "Group finder built for Princeton's McGraw Center. Still in active use by students.",
+      description: "Study group finder built for Princeton's McGraw Center.",
       link: {
-        label: "tigerapps.org",
-        href: "https://tigerapps.org/",
+        label: "tigerapps.org/archive",
+        href: "https://tigerapps.org/archive/",
       },
     },
     {
@@ -127,16 +147,6 @@ export const RESUME_DATA = {
       link: {
         label: "kasey-mcfadden.github.io/hack_ru",
         href: "https://kasey-mcfadden.github.io/hack_ru/",
-      },
-    },
-    {
-      title: "Mountain View",
-      techStack: ["Three.js", "WebGL", "JavaScript"],
-      description:
-        "Interactive 3D landscape with dynamic lighting, weather systems, and procedural terrain.",
-      link: {
-        label: "mountain-view.kaseym.com",
-        href: "https://mountain-view.kaseym.com/",
       },
     },
     {
@@ -158,12 +168,6 @@ export const RESUME_DATA = {
         label: "github.com/kasey-mcfadden/arc",
         href: "https://github.com/kasey-mcfadden/arc",
       },
-    },
-    {
-      title: "Edgeways",
-      techStack: ["Python", "JavaScript"],
-      description:
-        "Twitter-like platform incorporating tailored foreign language quizzes within your feed.",
     },
   ],
 } as const;
