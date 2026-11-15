@@ -59,13 +59,11 @@ export const RESUME_DATA = {
       end: "Jul. 2025",
       description: "Drove development of Microsoft's distributed CMS, enabling hundreds of authors to publish content at scale (500M+ monthly requests, 3B+ annual impressions) and supporting adoption across flagship products.",
       bullets: [
-        "Maintained and expanded a suite of 20+ scalable microservices.",
         "Cut sitewide permissions retrieval time by 76\% by refining C# concurrency techniques.",
         "Accelerated Copilot Labs (Microsoft's GenAI) adoption by streamlining content onboarding workflows.",
         "Identified and drove an 80% reduction in federated gateway durations by developing a Grafana k6 performance testing suite.",
         "Architected full-stack permissions features, including new performance dashboards via Microsoft's internal monitoring platform to target user improvements.",
         "Led 5+ high-priority privacy and security initiatives, ensuring safe service connections and secrets compliance.",
-        "Built LLM-powered Agile templates, increasing team velocity and delivery consistency.",
         "Onboarded and mentored 2 early-career engineers.",
       ],
       technologies: ["C#", "TypeScript", "React", "Redux", "GraphQL", "Azure DevOps", "Copilot", "OpenAI"],
@@ -78,8 +76,7 @@ export const RESUME_DATA = {
       logo: logos.capitalOne,
       start: "",
       end: "Summer 2021",
-      description: "Developed a React web application with Express.js to replace static sites for 30k+ users, integrating Tableau and QuickSight for streamlined business analytics, reducing manual reporting time by 40%. \
-        Earned Capital One's Certified Secure Software Engineer (CSSE) and CSSE Pro certifications for secure coding practices.",
+      description: "Developed a React web application with Express.js to replace static sites for 30k+ users, integrating Tableau and QuickSight for streamlined business analytics, reducing manual reporting time by 40%.",
       technologies: ["TypeScript", "React", "Express.js", "SQL"],
     },
     {
@@ -96,14 +93,17 @@ export const RESUME_DATA = {
     },
   ],
   skills: {
-    technologies: [
-      "OpenAI", "Anthropic", "RAG", "Kubernetes", "Docker", "AWS", "GCP", "Azure", "PostgreSQL", "PostHog", "CI/CD"
+    languages: [
+      "TypeScript/JavaScript", "Python", "Rust", "SQL", "C#", "Go"
+    ],
+    AI: [
+      "LLM agents", "RAG", "Vercel AI SDK", "LangChain"
     ],
     frameworks: [
-      "React", "Next.js", "LangChain", "Vercel AI SDK", "Temporal", "Node.js", "FastAPI", "Tailwind", "Playwright"
+      "React", "Next.js", "Node.js", "FastAPI", "Temporal", "Playwright", "Tailwind"
     ],
-    languages: [
-      "TypeScript/JavaScript", "Python", "C#", "Go", "SQL", "GraphQL", "Java"
+    infrastructure: [
+      "PostgreSQL", "AWS", "GCP", "Azure", "Docker", "GraphQL", "PostHog"
     ]
   },
   projects: [
